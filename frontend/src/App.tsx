@@ -44,7 +44,8 @@ function App() {
 
     try {
       let response;
-      const API_URL = 'http://localhost:3001/api';
+      // Use relative path for API so it works behind Nginx proxy at /jstool/api
+      const API_URL = 'api';
 
       if (activeTab === 'paste') {
         if (!textInput.trim()) throw new Error("Please enter some text to analyze");

@@ -1,0 +1,91 @@
+# JS Extractor - Walkthrough
+
+## Overview
+The **JS Extractor** is a cyber security tool designed to scan JavaScript files and text for sensitive information like API keys, secrets, URLs, and paths. It features a nostalgic **Super Mario Bros.** aesthetic.
+
+## 🚀 Getting Started
+
+### Option 1: Docker (Recommended)
+1. **Prerequisites**: Install Docker and Docker Compose.
+2. **Start**:
+   Open a terminal in the project root and run:
+   ```bash
+   docker-compose up --build
+   ```
+   > App runs on `http://localhost:5173`  
+   > Backend API on `http://localhost:3001`
+
+### Option 2: Manual Setup
+1. **Prerequisites**: Node.js installed on your system.
+2. **Start the Backend**:
+   ```bash
+   cd backend
+   npm install
+   node server.js
+   ```
+3. **Start the Frontend**:
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+
+## 🛡️ Usage Features
+
+### Analyze Text (Paste Code)
+1. Click the **PASTE CODE** button (styled like a pipe/brick).
+2. Paste any JavaScript code into the text area.
+   *Example:* `const apiKey = "AIzaSyD-FakeKey";`
+3. Click **START LEVEL!**.
+4. View the results in the log below.
+
+### Analyze File (Question Block)
+1. Click the **UPLOAD FILE** button.
+2. Click the **? Block** to select a file.
+3. Click **START LEVEL!**.
+
+### Interpreting Results
+- **LEVEL COMPLETE**: Analysis finished successfully.
+- **PRINCESS IS IN ANOTHER CASTLE**: No secrets found.
+- **GAME OVER**: Error occurred.
+
+## 🍄 Design (Super Mario Theme)
+- **World 1-1**: Sky blue background with clouds.
+- **Header**: Scoreboard style (MARIO, WORLD, TIME).
+- **Bricks & Pipes**: UI elements styled as game objects.
+- **Fonts**: 'Press Start 2P' for that authentic 8-bit feel.
+
+## 🐙 Pushing to GitHub
+
+To push this project to a new GitHub repository, follow these steps:
+
+1.  **Initialize Git**:
+    Open a terminal in the project root (`JS Extractor` folder) and run:
+    ```bash
+    git init
+    ```
+
+2.  **Add Files**:
+    Stage all files (I've already created a `.gitignore` to exclude `node_modules`):
+    ```bash
+    git add .
+    ```
+
+3.  **Commit**:
+    Save the changes locally:
+    ```bash
+    git commit -m "Initial commit: Super Mario JS Extractor"
+    ```
+
+4.  **Create Repository on GitHub**:
+    - Go to [github.com/new](https://github.com/new).
+    - Name your repository (e.g., `js-extractor-mario`).
+    - Click **Create repository**.
+
+5.  **Link and Push**:
+    Copy the commands from the "…or push an existing repository from the command line" section:
+    ```bash
+    git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+    git branch -M main
+    git push -u origin main
+    ```
