@@ -11,7 +11,10 @@ services:
     restart: always
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      args:
+        - VITE_API_URL=${VITE_API_URL:-http://localhost:3001/api}
     container_name: js-extractor-frontend
     ports:
       - "5173:80"

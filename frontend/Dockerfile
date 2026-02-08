@@ -9,6 +9,10 @@ RUN npm install
 
 COPY . .
 
+# Add build argument for API URL
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+
 # Build the project (outputs to /dist)
 RUN npm run build
 

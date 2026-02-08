@@ -44,7 +44,7 @@ function App() {
 
     try {
       let response;
-      const API_URL = 'http://localhost:3001/api';
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
       if (activeTab === 'paste') {
         if (!textInput.trim()) throw new Error("Please enter some text to analyze");
