@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Upload, Code, Search, AlertTriangle, Terminal, Copy, Coins, Castle } from 'lucide-react';
+import { Copy, Coins, Castle } from 'lucide-react';
 import './index.css';
 
 // Types
